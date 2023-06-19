@@ -21,7 +21,7 @@ export default function Account() {
       </Typography>
       <Box>
         <Profile player={player} isConnected={user.isConnected}></Profile>
-        <MyButton isConnected={user.isConnected} handleOnClick={handleOnClick}></MyButton>
+        <MyButton></MyButton>
       </Box>
     </Box>
   );

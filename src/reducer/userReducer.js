@@ -1,9 +1,9 @@
-export default userReducer(user, action){
+export default function userReducer(user, action){
   switch(action.type){
     case "login" : return {
       ...action.user,
       isConnected : true
-    }
+    };
     
     case "logout": return{
       ...user,

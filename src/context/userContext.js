@@ -1,7 +1,4 @@
 import { createContext } from "react";
 
-export const UserContext = createContext({
-  isConnected: false,
-  username: "",
-  avatarUrl: ""
-});
+export const UserContext = createContext(null);
+export const UserDispatchContext = createContext(null);

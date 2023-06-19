@@ -1,14 +1,20 @@
 'use client'
-import { UserContext } from "@/context/userContext.js"
-import { useState } from "react"
+import { UserContext, UserDispatchContext } from "@/context/userContext.js"
+import userReducer from "@/reducer/userReducer";
+import { useReducer } from "react"
 
 export default function UserProvider({ children }) {
 
-  const [user, setUser] = useState({
+  const [user, dispatch] = useReducer(userReducer, {
     isConnected: false,
-    username: "",
-    avatarUrl: ""
-  })
+    username: null,
+    avatarUrl: null
+  });
 
-  return (<UserContext.Provider value={user}>{children}</UserContext.Provider>)
+  return (
+    <UserContext.Provider value={user}>
+      <UserDispatchContext.Provider value={dispatch}>
+        {children}
+      </UserDispatchContext.Provider>
+    </UserContext.Provider>)
 }
