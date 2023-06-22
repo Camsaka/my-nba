@@ -1,14 +1,12 @@
 "use client"
+import { UserContext } from '@/context/userContext'
 import { Container } from '@mui/material'
-import { useState } from 'react'
+import { COMPILER_INDEXES } from 'next/dist/shared/lib/constants'
+import { useContext, useState } from 'react'
 
 export default function Home() {
-
-  const [isConnected, setIsConnected] = useState(false);
-  function handleOnClick(){
-    setIsConnected("true");
-  }
-
+  const user = useContext(UserContext);
+  console.log(user);
   return (
     <>
     <main>

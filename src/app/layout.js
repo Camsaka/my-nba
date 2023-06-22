@@ -1,4 +1,4 @@
-import UserProvider from './userProvider'
+import UserProvider from './provider/userProvider'
 
 export const metadata = {
   title: 'My NBA',
