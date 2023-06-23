@@ -54,6 +54,7 @@ export default function LoginForm() {
                <TextField
                   label="password"
                   onChange={(e) => setPassword(e.target.value)}
+                  type="password"
                />
                <Button variant="contained" onClick={handleOnClick}>
                   Login
