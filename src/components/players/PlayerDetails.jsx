@@ -2,7 +2,7 @@ import { Divider, Stack, Typography } from "@mui/material";
 
 export default function PlayerDetails({player}) {
    return (
-      <Stack spacing={1} divider={<Divider flexItem variant="middle" />}>
+      <Stack flex={1} spacing={1} divider={<Divider flexItem variant="middle" />}>
          <Typography>Prénom : {player.first_name}</Typography>
          <Typography>Nom : {player.last_name}</Typography>
          <Typography>Equipe : {player.team.full_name}</Typography>
