@@ -4,16 +4,17 @@ import { Fragment } from "react";
 
 export const dynamic = "force-static";
 
-export default function PlayersList({ players , params }) {
+export default function PlayersList({players , page}) {
    const router = useRouter();
-   
+   const pageCurrent = toString(page);
+
    function handleChange(e, page){
       router.push(`/players/${page}`);
    }
 
    return (
       <Box>
-         <Pagination count={players.meta.total_pages} color="primary" onChange={handleChange} />
+         <Pagination count={players.meta.total_pages} page={players.meta.current_page} color="primary" onChange={handleChange} />
          <List>
             {players.data.map((player) => (
                <Fragment key={player.id}>

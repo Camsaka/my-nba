@@ -8,7 +8,7 @@ export default function MainNav() {
 
    const dispatch = useContext(UserDispatchContext);
    const pages = [
-      { title: "NBA Player", url: "/players/0" },
+      { title: "NBA Player", url: "/players/1" },
       { title: "Mon compte", url: "/account" },
    ];
 

@@ -15,9 +15,9 @@ export default function UserProvider({ children }) {
    });
 
   
-   // useEffect(() => {
-   //    if (!user.isConnected) {router.push("/login");}
-   // }, [user.isConnected]);
+   useEffect(() => {
+      if (!user.isConnected) {router.push("/login");}
+   }, [user.isConnected]);
 
    return (
       <UserContext.Provider value={user}>
