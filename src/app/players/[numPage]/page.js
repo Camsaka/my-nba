@@ -16,16 +16,21 @@ export async function generateStaticParams() {
    });
 }
 
-export default async function Players({params}) {
-   const res = await fetch(`https://www.balldontlie.io/api/v1/players/?page=${params.numPage}`);
+async function getPlayers(params) {
+   const res = await fetch(
+      `https://www.balldontlie.io/api/v1/players/?page=${params.numPage}`
+   );
    const players = await res.json();
-   console.log(players);
-   console.log("params num page :" + params.numPage);
+   return players;
+}
+
+export default async function Players({ params }) {
+   const players = await getPlayers(params);
    return (
       <>
          <Layout>
             <Box>
-               <PlayersList players={players} ></PlayersList>
+               <PlayersList players={players}></PlayersList>
             </Box>
          </Layout>
       </>

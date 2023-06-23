@@ -4,9 +4,8 @@ import { Fragment } from "react";
 
 export const dynamic = "force-static";
 
-export default function PlayersList({players , page}) {
+export default function PlayersList({players}) {
    const router = useRouter();
-   const pageCurrent = toString(page);
 
    function handleChange(e, page){
       router.push(`/players/${page}`);
