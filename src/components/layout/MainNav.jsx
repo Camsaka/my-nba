@@ -16,8 +16,9 @@ export default function MainNav() {
       dispatch({type:"logout"});
    }
 
+   const APP_BAR_HEIGHT = 80;
    return (
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, height: APP_BAR_HEIGHT }}>
          <AppBar position="static">
             <Toolbar>
                <Box>

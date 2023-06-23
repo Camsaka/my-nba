@@ -1,7 +1,7 @@
-"use client";
+"use client"
 import Layout from "@/components/layout/Layout";
 import PlayersList from "@/components/players/PlayersList";
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 // Return a list of `params` to populate the [numPage] dynamic segment
 export async function generateStaticParams() {
