@@ -17,6 +17,7 @@ export default function UserProvider({ children }) {
   
    useEffect(() => {
       if (!user.isConnected) {router.push("/login");}
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [user.isConnected]);
 
    return (
