@@ -8,7 +8,7 @@ export default function PlayerDetails({player}) {
          <Typography>Equipe : {player.team.full_name}</Typography>
          <Typography>Poste : {player.position}</Typography>
          <Typography>
-            Taille : {player.height_feet}' {player.height_inches}"
+            Taille : {player.height_feet}&apos; {player.height_inches}&quot;
          </Typography>
          <Typography>Poids : {player.weight_pounds}</Typography>
       </Stack>
