@@ -6,7 +6,7 @@ import { useEffect, useReducer } from "react";
 
 export default function UserProvider({ children }) {
 
-//   const router = useRouter();
+  const router = useRouter();
 
    const [user, dispatch] = useReducer(userReducer, {
       isConnected: false,
@@ -15,9 +15,9 @@ export default function UserProvider({ children }) {
    });
 
   
-   // useEffect(() => {
-   //    if (!user.isConnected) {router.push("/login");}
-   // }, [user.isConnected]);
+   useEffect(() => {
+      if (!user.isConnected) {router.push("/login");}
+   }, [user.isConnected]);
 
    return (
       <UserContext.Provider value={user}>
